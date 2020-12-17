@@ -8,9 +8,9 @@ import javax.swing.*;
 
 public class ProgressBarProblem implements Problem, Runnable, Cleanup {
     private JProgressBar progress;
-    int finalValue, steps, delay;
+    private int finalValue, steps, delay;
     private JFrame panel;
-    Thread progressThread;
+    private Thread progressThread;
 
     public ProgressBarProblem(){
         panel = new JFrame();
@@ -61,5 +61,6 @@ public class ProgressBarProblem implements Problem, Runnable, Cleanup {
     @Override
     public void cleanup() {
         panel.dispose();
+        progressThread = null;
     }
 }

@@ -4,7 +4,7 @@ import com.scabhi98.ExecutionEnvironment;
 import com.scabhi98.Problem;
 
 public class RollValidationProblem implements Problem {
-    String roll;
+    private String roll;
     @Override
     public String getProblemStatement() {
         return "Roll Number Validation";

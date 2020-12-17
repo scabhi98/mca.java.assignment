@@ -3,8 +3,6 @@ package com.scabhi98.groupA;
 import com.scabhi98.ExecutionEnvironment;
 import com.scabhi98.Problem;
 
-import java.util.Scanner;
-
 public class PrimeNumbersProblem implements Problem {
     private PrimeNumbers primeNumbers;
     public PrimeNumbersProblem(){

@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class CountryCapitalProblem implements Problem {
 
-    String countryFileName, capitalFileName, outputFileName;
+    private String countryFileName, capitalFileName, outputFileName;
 
     @Override
     public String getProblemStatement() {
