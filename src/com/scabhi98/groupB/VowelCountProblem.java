@@ -1,5 +1,6 @@
 package com.scabhi98.groupB;
 
+import com.scabhi98.ExecutionEnvironment;
 import com.scabhi98.Problem;
 
 import java.io.BufferedReader;
@@ -64,8 +65,6 @@ public class VowelCountProblem implements Problem {
 
     @Override
     public void readInputs() throws Exception {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("\nEnter Sentence: ");
-        sentence = reader.readLine();
+        sentence = ExecutionEnvironment.readInputFor("Sentence");
     }
 }

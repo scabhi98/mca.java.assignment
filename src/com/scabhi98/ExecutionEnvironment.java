@@ -11,7 +11,7 @@ public class ExecutionEnvironment {
     final public static BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in));
 
     final public static String readInputFor(String textToPrint){
-        System.out.print("\n "+textToPrint + ": ");
+        System.out.print("\n Enter "+textToPrint + ": ");
         String read = "";
         try {
             read = consoleReader.readLine();

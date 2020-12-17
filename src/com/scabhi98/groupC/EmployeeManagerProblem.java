@@ -36,21 +36,21 @@ public class EmployeeManagerProblem implements Problem {
     }
 
     private void readEmployee() throws Exception {
-        String name = ExecutionEnvironment.readInputFor("Enter Name");
-        String address = ExecutionEnvironment.readInputFor("Enter Address");
-        String contact = ExecutionEnvironment.readInputFor("Enter Contact");
-        String specialization = ExecutionEnvironment.readInputFor("Enter Specialization");
-        int age = Integer.parseInt(ExecutionEnvironment.readInputFor("Enter Age"));
-        int salary = Integer.parseInt(ExecutionEnvironment.readInputFor("Enter Salary"));
+        String name = ExecutionEnvironment.readInputFor("Name");
+        String address = ExecutionEnvironment.readInputFor("Address");
+        String contact = ExecutionEnvironment.readInputFor("Contact");
+        String specialization = ExecutionEnvironment.readInputFor("Specialization");
+        int age = Integer.parseInt(ExecutionEnvironment.readInputFor("Age"));
+        int salary = Integer.parseInt(ExecutionEnvironment.readInputFor("Salary"));
         emp.setData(name,address,contact,specialization,age,salary);
     }
     private void readManager() throws Exception {
-        String name = ExecutionEnvironment.readInputFor("Enter Name");
-        String address = ExecutionEnvironment.readInputFor("Enter Address");
-        String contact = ExecutionEnvironment.readInputFor("Enter Contact");
-        String department = ExecutionEnvironment.readInputFor("Enter Department");
-        int age = Integer.parseInt(ExecutionEnvironment.readInputFor("Enter Age"));
-        int salary = Integer.parseInt(ExecutionEnvironment.readInputFor("Enter Salary"));
+        String name = ExecutionEnvironment.readInputFor("Name");
+        String address = ExecutionEnvironment.readInputFor("Address");
+        String contact = ExecutionEnvironment.readInputFor("Contact");
+        String department = ExecutionEnvironment.readInputFor("Department");
+        int age = Integer.parseInt(ExecutionEnvironment.readInputFor("Age"));
+        int salary = Integer.parseInt(ExecutionEnvironment.readInputFor("Salary"));
         mgr.setData(name,address,contact,department,age,salary);
     }
 }

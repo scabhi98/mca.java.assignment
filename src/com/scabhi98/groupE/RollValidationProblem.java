@@ -23,6 +23,6 @@ public class RollValidationProblem implements Problem {
 
     @Override
     public void readInputs() throws Exception {
-        roll = ExecutionEnvironment.readInputFor("Enter Roll");
+        roll = ExecutionEnvironment.readInputFor("Roll");
     }
 }

@@ -6,6 +6,7 @@ import com.scabhi98.groupB.VowelCountProblem;
 import com.scabhi98.groupC.EmployeeManagerProblem;
 import com.scabhi98.groupD.CountryCapitalProblem;
 import com.scabhi98.groupE.RollValidationProblem;
+import com.scabhi98.groupF.ProgressBarProblem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +30,10 @@ public class Main {
 
                 problems.get(choice - 1).execute();
 
+                if(problems.get(choice - 1) instanceof Cleanup){
+                    ((Cleanup) problems.get(choice - 1)).cleanup();
+                }
+
             }catch(IndexOutOfBoundsException e){
                 System.out.println("Invalid Choice! Terminating...");
                 break;
@@ -46,6 +51,7 @@ public class Main {
         problems.add( new VowelCountProblem() );
         problems.add( new EmployeeManagerProblem() );
         problems.add( new RollValidationProblem() );
+        problems.add( new ProgressBarProblem() );
 
         return problems.size();
     }
