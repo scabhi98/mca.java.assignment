@@ -1,15 +1,14 @@
 package com.scabhi98.groupB;
 
+import com.scabhi98.Cleanup;
 import com.scabhi98.ExecutionEnvironment;
 import com.scabhi98.Problem;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class VowelCountProblem implements Problem {
+public class VowelCountProblem implements Problem, Cleanup {
     private Map<String, Integer> vowelCountMap;
     private String sentence;
 
@@ -20,29 +19,6 @@ public class VowelCountProblem implements Problem {
     @Override
     public String getProblemStatement() {
         return "Count Vowels in a Sentence";
-    }
-
-    @Override
-    public void execute() throws Exception {
-        Scanner scanner = new Scanner(sentence);
-        String maxVowledWord = "";
-        int maxVowledCount = 0;
-        while(scanner.hasNext()) {
-            String token = scanner.next();
-            int count = countVowels(token);
-            if(count > maxVowledCount){
-                maxVowledWord = token;
-                maxVowledCount = count;
-            }
-            vowelCountMap.put(token, count);
-        }
-        System.out.print("\n Highest vowels count is in word: "+ maxVowledWord + " = "+maxVowledCount);
-
-        System.out.println("\n\n Table of Word Vowel Count:");
-
-        for(Map.Entry<String, Integer> entry: vowelCountMap.entrySet()){
-            System.out.printf("\n%32s    :    %d", entry.getKey(), entry.getValue());
-        }
     }
 
     private int countVowels(String word){
@@ -66,5 +42,33 @@ public class VowelCountProblem implements Problem {
     @Override
     public void readInputs() throws Exception {
         sentence = ExecutionEnvironment.readInputFor("Sentence");
+    }
+
+    @Override
+    public void cleanup() {
+        vowelCountMap.clear();
+    }
+
+    @Override
+    public void execute() throws Exception {
+        Scanner scanner = new Scanner(sentence);
+        String maxVowledWord = "";
+        int maxVowledCount = 0;
+        while(scanner.hasNext()) {
+            String token = scanner.next();
+            int count = countVowels(token);
+            if(count > maxVowledCount){
+                maxVowledWord = token;
+                maxVowledCount = count;
+            }
+            vowelCountMap.put(token, count);
+        }
+        System.out.print("\n Highest vowels count is in word: "+ maxVowledWord + " = "+maxVowledCount);
+
+        System.out.println("\n\n Table of Word Vowel Count:");
+
+        for(Map.Entry<String, Integer> entry: vowelCountMap.entrySet()){
+            System.out.printf("\n%32s    :    %d", entry.getKey(), entry.getValue());
+        }
     }
 }

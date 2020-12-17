@@ -17,11 +17,12 @@ public class CountryCapitalProblem implements Problem {
 
     @Override
     public void readInputs() throws Exception {
-        countryFileName = ExecutionEnvironment.FILES_DIR_PREFIX + ExecutionEnvironment.readInputFor("Country Filename");
-        System.out.println("Enter Capital Filename: ");
-        capitalFileName = ExecutionEnvironment.FILES_DIR_PREFIX + ExecutionEnvironment.readInputFor("Capital Filename");
-        System.out.println("Enter Country Capital Filename: ");
-        outputFileName = ExecutionEnvironment.FILES_DIR_PREFIX + ExecutionEnvironment.readInputFor("Output Filename");
+        countryFileName = ExecutionEnvironment.FILES_DIR_PREFIX +
+                ExecutionEnvironment.readInputFor("Country Filename");
+        capitalFileName = ExecutionEnvironment.FILES_DIR_PREFIX +
+                ExecutionEnvironment.readInputFor("Capital Filename");
+        outputFileName = ExecutionEnvironment.FILES_DIR_PREFIX +
+                ExecutionEnvironment.readInputFor("Output Filename");
     }
 
     @Override

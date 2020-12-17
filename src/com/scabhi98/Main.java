@@ -14,6 +14,18 @@ import java.util.Scanner;
 
 public class Main {
 
+    private static int instantiateProblems(List<Problem> problems ){
+        problems.add( new CountryCapitalProblem() );
+        problems.add( new PrimeNumbersProblem() );
+        problems.add( new StudentMarksheetProblem() );
+        problems.add( new VowelCountProblem() );
+        problems.add( new EmployeeManagerProblem() );
+        problems.add( new RollValidationProblem() );
+        problems.add( new ProgressBarProblem() );
+
+        return problems.size();
+    }
+
     public static void main(String[] args) {
 	    List<Problem> problems = new ArrayList<Problem>();
 	    int problemCount = instantiateProblems(problems);
@@ -43,17 +55,4 @@ public class Main {
         }
 
     }
-
-    private static int instantiateProblems(List<Problem> problems ){
-        problems.add( new CountryCapitalProblem() );
-        problems.add( new PrimeNumbersProblem() );
-        problems.add( new StudentMarksheetProblem() );
-        problems.add( new VowelCountProblem() );
-        problems.add( new EmployeeManagerProblem() );
-        problems.add( new RollValidationProblem() );
-        problems.add( new ProgressBarProblem() );
-
-        return problems.size();
-    }
-
 }
